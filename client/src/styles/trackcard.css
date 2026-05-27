@@ -1,0 +1,167 @@
+.track-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.track-card:hover {
+  background: var(--bg-secondary);
+}
+
+.track-card.active {
+  background: #fff5f0;
+}
+
+.track-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.track-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-wave {
+  width: 30px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.6) 0px,
+    rgba(255,255,255,0.6) 2px,
+    transparent 2px,
+    transparent 5px
+  );
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.track-cover:hover .play-overlay {
+  opacity: 1;
+}
+
+.track-card.active .play-overlay {
+  opacity: 1;
+  background: rgba(255, 85, 0, 0.7);
+}
+
+.track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-artist {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.track-artist:hover {
+  color: var(--text);
+}
+
+.track-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-title:hover {
+  color: var(--primary);
+}
+
+.track-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.track-genre {
+  font-size: 11px;
+  background: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: var(--text-light);
+}
+
+.track-date {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.track-stats {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.track-stats .stat,
+.track-stats .stat-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.stat-btn {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.stat-btn:hover {
+  color: var(--text);
+}
+
+.stat-btn.liked {
+  color: var(--primary);
+}
+
+.track-stats .plays {
+  font-size: 12px;
+}
+
+.track-duration {
+  font-size: 12px;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 4px;
+}
