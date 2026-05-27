@@ -1,0 +1,185 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: var(--bg-dark);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: #ccc;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.search-form {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  background: #333;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  outline: none;
+}
+
+.search-form input:focus {
+  background: #444;
+}
+
+.search-form input::placeholder {
+  color: #888;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background: var(--primary-dark);
+}
+
+.user-menu-wrapper {
+  position: relative;
+}
+
+.user-avatar-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.user-avatar-btn img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  min-width: 160px;
+  padding: 6px 0;
+  z-index: 100;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  color: var(--text);
+  font-size: 14px;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background: var(--bg-secondary);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-signin {
+  color: #ccc;
+  font-size: 13px;
+  padding: 6px 14px;
+}
+
+.btn-signin:hover {
+  color: white;
+}
+
+.btn-signup {
+  background: var(--primary);
+  color: white;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+}
